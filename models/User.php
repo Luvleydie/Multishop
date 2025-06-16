@@ -1,8 +1,7 @@
 <?php
+require_once __DIR__ . '/../config/conexion.php';
 
-require_once "../config/conexion.php";
-
-class UsuarioModel {
+class UserModel {
     private $conn;
 
     public function __construct() {
@@ -12,7 +11,7 @@ class UsuarioModel {
 
     public function getAll() {
         $result = $this->conn->query("SELECT * FROM usuarios");
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return $result ? $result->fetch_all(MYSQLI_ASSOC) : [];
     }
 
     public function create($data) {
