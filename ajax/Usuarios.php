@@ -1,8 +1,8 @@
 <?php
-require_once '../modelos/Usuario.php';
+require_once '../models/User.php';
 
 header("Content-Type: application/json");
-$usuario = new UsuarioModel();
+$usuario = new UserModel();
 $method = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {

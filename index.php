@@ -1,3 +1,4 @@
 <?php
-header ("localhost:/vistas/index.html");
+header("Location: vistas/index.html");
+exit;
 ?>
